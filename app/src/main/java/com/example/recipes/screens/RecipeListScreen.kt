@@ -1,5 +1,6 @@
 package com.example.recipes.ui.screens
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
@@ -45,6 +46,9 @@ fun RecipeListScreen(repository: RecipeRepository, onRecipeClick: (Recipe) -> Un
             if (success) {
                 val newRecipes = repository.getLocalRecipes().firstOrNull() ?: emptyList()
                 val filteredNewRecipes = newRecipes.filterNot { it in recipes }
+
+                println(" Recettes récupérées depuis la bdd : $newRecipes")
+
                 recipes.addAll(filteredNewRecipes)
             } else {
                 errorMessage = "Erreur de chargement"

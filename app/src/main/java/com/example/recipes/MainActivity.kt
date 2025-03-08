@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                 val selectedRecipe: Recipe? = selectedRecipeJson?.let { Json.decodeFromString(it) }
 
                 if (isLoading) {
-                    LoadingScreen(onTimeout = { isLoading = false })
+                    LoadingScreen({ isLoading = false }) // grâce au callback, isLoading va me revenir à false au bout de 2 secondes.
                 } else {
                     if (selectedRecipe == null) {
                         RecipeListScreen(repository) { recipe ->
