@@ -43,18 +43,18 @@ L’application est organisée en **plusieurs modules**, facilitant **la mainten
 ##  Barème d'évaluation (40 points)
 Ci-dessous, une checklist basée sur le **barème d'évaluation**, avec pour les fonctionnalités réalisées, et **références au code**.
 
-| Fonctionnalité | Points | Statut | Justification & Références au Code |
-|---------------|--------|------|------------------------------------|
-| **Écran de chargement avec un logo personnalisé** | 2 pts |  Fait | **Fichier :** `MainActivity.kt` (Splash Screen avant chargement des recettes). |
-| **Affichage de la liste des recettes disponibles** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Utilisation de `LazyVerticalGrid` pour afficher la liste des recettes). |
-| **Affichage d'une image pour chaque recette** | 2 pts |  Fait | **Fichier :** `components/RecipeCard.kt` (Image affichée avec `AsyncImage`). |
+| Fonctionnalité | Points | Statut | Justification & Références au Code                                                                                                                                          |
+|---------------|--------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Écran de chargement avec un logo personnalisé** | 2 pts |  Fait | **Fichier :** `MainActivity.kt` (LoadingScreen avant chargement des recettes).                                                                                              |
+| **Affichage de la liste des recettes disponibles** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Utilisation de `LazyVerticalGrid` pour afficher la liste des recettes).                                                        |
+| **Affichage d'une image pour chaque recette** | 2 pts |  Fait | **Fichier :** `components/RecipeCard.kt` (Image affichée avec `AsyncImage`).                                                                                                |
 | **Chargement de la page suivante en arrivant en bas de la liste** | 4 pts |  Fait | **Fichier :** `screens/RecipeListScreen.kt`, **Méthode :** `LaunchedEffect(listState.layoutInfo.visibleItemsInfo)` (Détection du scroll et chargement des nouvelles pages). |
-| **Accès aux détails d'une recette en appuyant dessus** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Navigation vers l’écran de détails). |
-| **Filtrage des recettes via une barre de recherche** | 4 pts |  Fait | **Fichier :** `screens/RecipeListScreen.kt`, **Méthode :** `filteredRecipes` (Recherche avec `contains(searchQuery, ignoreCase = true)`). |
-| **Filtrage par catégories via des boutons** | 3 pts |  Fait | **Fichier :** `components/RecipeFilters.kt` (Boutons interactifs avec `onClick`). |
-| **Mode hors-ligne : accès aux recettes après consultation initiale** | 8 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthodes :** `getLocalRecipes()` et `fetchRecipes()` (Stockage et récupération des recettes avec Room). |
-| **Mise à jour régulière des données locales** | 4 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthode :** `fetchRecipes()` (Mise à jour des recettes locales après récupération API). |
-| **Architecture segmentée en couches** | 5 pts |  Fait | **Structure :** Séparation en `screens/`, `repositories/`, `db/`, `models/`, `components/` (Architecture propre et maintenable). |
+| **Accès aux détails d'une recette en appuyant dessus** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Navigation vers l’écran de détails).                                                                                           |
+| **Filtrage des recettes via une barre de recherche** | 4 pts |  Fait | **Fichier :** `screens/RecipeListScreen.kt`, **Méthode :** `filteredRecipes` (Recherche avec `contains(searchQuery, ignoreCase = true)`).                                   |
+| **Filtrage par catégories via des boutons** | 3 pts |  Fait | **Fichier :** `components/RecipeFilters.kt` (Boutons interactifs avec `onClick`).                                                                                           |
+| **Mode hors-ligne : accès aux recettes après consultation initiale** | 8 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthodes :** `getLocalRecipes()` et `fetchRecipes()` (Stockage et récupération des recettes avec Room).                 |
+| **Mise à jour régulière des données locales** | 4 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthode :** `fetchRecipes()` (Mise à jour des recettes locales après récupération API).                                 |
+| **Architecture segmentée en couches** | 5 pts |  Fait | **Structure :** Séparation en `screens/`, `repositories/`, `db/`, `models/`, `components/` (Architecture propre et maintenable).                                            |
 
  **Total obtenu : 40 / 40 points** 
 
