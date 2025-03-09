@@ -31,12 +31,12 @@ It uses a **local database (Room) with API synchronization**, enabling **offline
 ### Organized Layered Architecture
 The application is structured into **multiple modules**, ensuring **maintainability** and **scalability**:
 
-components 
-db
-models
-repositories
-screens
-MainActivity.kt
+- `components/`
+- `db/`
+- `models/`
+- `repositories/`
+- `screens/`
+- `MainActivity.kt`
 
 ---
 
