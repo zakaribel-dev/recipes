@@ -1,4 +1,4 @@
-# 🍽️ Recipe Explorer - Cooking Recipes Application
+#  Recipe Explorer - Cooking Recipes Application
 
 ## Project Overview
 Recipe Explorer is a mobile application developed in **Kotlin with Jetpack Compose**, allowing users to **browse, search, and filter cooking recipes**.
@@ -7,7 +7,7 @@ It uses a **local database (Room) with API synchronization**, enabling **offline
 
 ---
 
-## ✨ Main Features
+##  Main Features
 
 ### Display and Navigation
 - **Splash screen** with a customized logo.
@@ -40,7 +40,7 @@ MainActivity.kt
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - **Language**: Kotlin
 - **User Interface**: Jetpack Compose
 - **Local Database**: Room Database
@@ -51,13 +51,13 @@ MainActivity.kt
 
 ---
 
-## 🚀 Installation and Execution
+##  Installation and Execution
 
-### 📥 Prerequisites
+###  Prerequisites
 - Android Studio installed
 - Use the Android Studio emulator or a connected Android device
 
-### 🏃 Running the Application
+###  Running the Application
 1. Clone the project:
    ```bash
    git clone https://github.com/zakaribel-dev/recipes.git
