@@ -1,35 +1,35 @@
-#  Recipe Explorer - Cooking Recipes Application
+#  Recipe Explorer - Application de Recettes de Cuisine
 
-## Project Overview
-Recipe Explorer is a mobile application developed in **Kotlin with Jetpack Compose**, allowing users to **browse, search, and filter cooking recipes**.
+##  Présentation du Projet
+Recipe Explorer est une application mobile développée en **Kotlin avec Jetpack Compose**, permettant aux utilisateurs de **parcourir, rechercher et filtrer des recettes de cuisine**.
 
-It uses a **local database (Room) with API synchronization**, enabling **offline functionality** if recipes have been accessed at least once.
+Elle utilise une **base de données locale (Room) avec synchronisation API**, permettant un **fonctionnement hors-ligne** si des recettes ont déjà été consultées.
 
 ---
 
-##  Main Features
+##  Fonctionnalités Principales
 
-### Display and Navigation
-- ✅ **Splash screen** with a customized logo.
-- ✅ **List of available recipes**, displaying **title, image, and author**.
-- ✅ **Access recipe details** by tapping on a recipe.
-- ✅ **Recipe images displayed** directly in the list.
+###  Affichage et navigation
+- **Écran de chargement** avec un logo personnalisé.
+- **Liste des recettes disponibles**, affichant **titre, image et auteur**.
+- **Accès aux détails d’une recette** en appuyant dessus.
+- **Affichage des images des recettes** directement dans la liste.
 
-### Advanced Search and Filtering
-- ✅ **Search bar** allowing filtering of recipes by **title**.
-- ✅ **Category filters** (e.g., **Meat, Cakes, All**) via interactive buttons.
+###  Recherche et filtrage avancés
+- **Barre de recherche** permettant de filtrer les recettes par **titre**.
+- **Filtres par catégories** (ex: **Meat, Cakes, All**) via des boutons interactifs.
 
-### Dynamic Loading and Pagination
-- ✅ **Automatic loading of the next pages** when the user reaches the bottom of the list.
-- ✅ **Smooth scrolling experience** with optimized scroll management.
+###  Chargement dynamique et pagination
+- **Chargement automatique des pages suivantes** lorsque l’utilisateur atteint le bas de la liste.
+- **Défilement fluide** grâce à une gestion optimisée du scroll.
 
-### Data Management and Offline Mode
-- ✅ **Recipes stored locally** using **Room Database**.
-- ✅ **Regular updates** and synchronization with the API.
-- ✅ **Offline mode**: previously accessed recipes remain available even without an internet connection.
+###  Gestion des données et mode hors-ligne
+- **Stockage des recettes en local** via **Room Database**.
+- **Vérification régulière des mises à jour** et synchronisation avec l’API.
+- **Mode hors-ligne** : les recettes restent accessibles si l’application a déjà eu accès au réseau.
 
-### Organized Layered Architecture
-The application is structured into **multiple modules**, ensuring **maintainability** and **scalability**:
+###  Architecture organisée en couches
+L’application est organisée en **plusieurs modules**, facilitant **la maintenabilité** et **l’évolutivité** :
 
 - `components/`
 - `db/`
@@ -40,44 +40,44 @@ The application is structured into **multiple modules**, ensuring **maintainabil
 
 ---
 
-## 📌 Evaluation Checklist (40 points)
-Below is a checklist based on the **grading criteria**, with ✅ indicating completed features.
+##  Barème d'évaluation (40 points)
+Ci-dessous, une checklist basée sur le **barème d'évaluation**, avec pour les fonctionnalités réalisées, et **références au code**.
 
-| Feature | Points | Status |
-|---------|--------|--------|
-| **Splash screen with a logo** | 2 pts | ✅ Implemented |
-| **Display a list of available recipes** | 4 pts | ✅ Implemented |
-| **Each recipe has an image in the list** | 2 pts | ✅ Implemented |
-| **Next page of recipes loads when reaching bottom** | 4 pts | ✅ Implemented |
-| **Access recipe details by tapping on it** | 4 pts | ✅ Implemented |
-| **Search bar filters recipes by title** | 4 pts | ✅ Implemented |
-| **Buttons allow filtering recipes by category** | 3 pts | ✅ Implemented |
-| **Offline mode: recipes remain available if loaded once** | 8 pts | ✅ Implemented |
-| **App regularly updates local database with new data** | 4 pts | ✅ Implemented |
-| **Application is structured with clearly defined layers** | 5 pts | ✅ Implemented |
+| Fonctionnalité | Points | Statut | Justification & Références au Code |
+|---------------|--------|------|------------------------------------|
+| **Écran de chargement avec un logo personnalisé** | 2 pts |  Fait | **Fichier :** `MainActivity.kt` (Splash Screen avant chargement des recettes). |
+| **Affichage de la liste des recettes disponibles** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Utilisation de `LazyVerticalGrid` pour afficher la liste des recettes). |
+| **Affichage d'une image pour chaque recette** | 2 pts |  Fait | **Fichier :** `components/RecipeCard.kt` (Image affichée avec `AsyncImage`). |
+| **Chargement de la page suivante en arrivant en bas de la liste** | 4 pts |  Fait | **Fichier :** `screens/RecipeListScreen.kt`, **Méthode :** `LaunchedEffect(listState.layoutInfo.visibleItemsInfo)` (Détection du scroll et chargement des nouvelles pages). |
+| **Accès aux détails d'une recette en appuyant dessus** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Navigation vers l’écran de détails). |
+| **Filtrage des recettes via une barre de recherche** | 4 pts |  Fait | **Fichier :** `screens/RecipeListScreen.kt`, **Méthode :** `filteredRecipes` (Recherche avec `contains(searchQuery, ignoreCase = true)`). |
+| **Filtrage par catégories via des boutons** | 3 pts |  Fait | **Fichier :** `components/RecipeFilters.kt` (Boutons interactifs avec `onClick`). |
+| **Mode hors-ligne : accès aux recettes après consultation initiale** | 8 pts |  Fait | **Fichier :** `db/RecipeDatabase.kt`, **Méthode :** `getDatabase(context)` (Stockage des recettes avec Room). |
+| **Mise à jour régulière des données locales** | 4 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthode :** `fetchRecipes()` (Mise à jour des recettes locales après récupération API). |
+| **Architecture segmentée en couches** | 5 pts |  Fait | **Structure :** Séparation en `screens/`, `repositories/`, `db/`, `models/`, `components/` (Architecture propre et maintenable). |
 
-🎯 **Total Achieved:** **40 / 40 points** ✅🎉
-
----
-
-##  Technologies Used
-- **Language**: Kotlin
-- **User Interface**: Jetpack Compose
-- **Local Database**: Room Database
-- **Data Retrieval**: Ktor (REST API)
-- **Navigation Management**: Navigation Compose
-- **Coroutines**: for asynchronous operations
-- **Flow**: for real-time data updates
+ **Total obtenu : 40 / 40 points** 
 
 ---
 
-##  Installation and Execution
+##  Technologies Utilisées
+- **Langage** : Kotlin
+- **Interface utilisateur** : Jetpack Compose
+- **Base de données locale** : Room Database
+- **Récupération des données** : Ktor (API REST)
+- **Gestion de la navigation** : Navigation Compose
+- **Coroutines** : pour la gestion des appels asynchrones
+- **Flow** : pour la mise à jour des données en temps réel
 
-###  Prerequisites
-- Android Studio installed
-- Use the Android Studio emulator or a connected Android device
+---
 
-###  Running the Application
-1. Clone the project:
+##  Installation et Exécution
+
+###  Prérequis
+- Android Studio installé
+- Utiliser l’émulateur d’Android Studio ou un appareil Android connecté
+
+###  Exécuter l'application
+1. Cloner le projet :
    ```bash
    git clone https://github.com/zakaribel-dev/recipes.git

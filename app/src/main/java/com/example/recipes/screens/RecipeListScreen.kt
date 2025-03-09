@@ -156,7 +156,7 @@ fun RecipeListScreen(repository: RecipeRepository, onRecipeClick: (Recipe) -> Un
 
     // Structure principale de l’écran (Barre d’app, recherche, filtres et grille des recettes)
     Scaffold(
-        topBar = { TopAppBar(title = { Text("Kitchen recipes") }) }
+        topBar = { TopAppBar(title = { Text("Recipe Explorer") }) }
     ) { padding ->
         Column(
             modifier = Modifier
