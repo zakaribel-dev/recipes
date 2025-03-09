@@ -1,37 +1,37 @@
-# Recipe Explorer - Application de Recettes de Cuisine
+# 🍽️ Recipe Explorer - Cooking Recipes Application
 
-## Présentation du Projet
-Recipe Explorer est une application mobile développée en **Kotlin avec Jetpack Compose**, permettant aux utilisateurs de **parcourir, rechercher et filtrer des recettes de cuisine**.
+## Project Overview
+Recipe Explorer is a mobile application developed in **Kotlin with Jetpack Compose**, allowing users to **browse, search, and filter cooking recipes**.
 
-Elle utilise une **base de données locale (Room) avec synchronisation API**, permettant un **fonctionnement hors-ligne** si des recettes ont déjà été consultées.
+It uses a **local database (Room) with API synchronization**, enabling **offline functionality** if recipes have been accessed at least once.
 
 ---
 
-##  Fonctionnalités Principales
+## ✨ Main Features
 
-### Affichage et navigation
-- **Écran de chargement** avec un logo personnalisé.
-- **Liste des recettes disponibles**, affichant **titre, image et auteur**.
-- **Accès aux détails d’une recette** en appuyant dessus.
-- **Affichage des images des recettes** directement dans la liste.
+### Display and Navigation
+- **Splash screen** with a customized logo.
+- **List of available recipes**, displaying **title, image, and author**.
+- **Access recipe details** by tapping on a recipe.
+- **Recipe images displayed** directly in the list.
 
-### Recherche et filtrage avancés
-- **Barre de recherche** permettant de filtrer les recettes par **titre**.
-- **Filtres par catégories** (ex: **Meat, Cakes, All**) via des boutons interactifs.
+### Advanced Search and Filtering
+- **Search bar** allowing filtering of recipes by **title**.
+- **Category filters** (e.g., **Meat, Cakes, All**) via interactive buttons.
 
-### Chargement dynamique et pagination
-- **Chargement automatique des pages suivantes** lorsque l’utilisateur atteint le bas de la liste.
-- **Défilement fluide** grâce à une gestion optimisée du scroll.
+### Dynamic Loading and Pagination
+- **Automatic loading of the next pages** when the user reaches the bottom of the list.
+- **Smooth scrolling experience** with optimized scroll management.
 
-### Gestion des données et mode hors-ligne
-- **Stockage des recettes en local** via **Room Database**.
-- **Vérification régulière des mises à jour** et synchronisation avec l’API.
-- **Mode hors-ligne** : les recettes restent accessibles si l’application a déjà eu accès au réseau.
+### Data Management and Offline Mode
+- **Recipes stored locally** using **Room Database**.
+- **Regular updates** and synchronization with the API.
+- **Offline mode**: previously accessed recipes remain available even without an internet connection.
 
-###  Architecture organisée en couches
-L’application est organisée en **plusieurs modules**, facilitant **la maintenabilité** et **l’évolutivité** :
+### Organized Layered Architecture
+The application is structured into **multiple modules**, ensuring **maintainability** and **scalability**:
 
-components
+components 
 db
 models
 repositories
@@ -40,24 +40,24 @@ MainActivity.kt
 
 ---
 
-## 🛠️ Technologies Utilisées
-- **Langage** : Kotlin
-- **Interface utilisateur** : Jetpack Compose
-- **Base de données locale** : Room Database
-- **Récupération des données** : Ktor (API REST)
-- **Gestion de la navigation** : Navigation Compose
-- **Coroutines** : pour la gestion des appels asynchrones
-- **Flow** : pour la mise à jour des données en temps réel
+## 🛠️ Technologies Used
+- **Language**: Kotlin
+- **User Interface**: Jetpack Compose
+- **Local Database**: Room Database
+- **Data Retrieval**: Ktor (REST API)
+- **Navigation Management**: Navigation Compose
+- **Coroutines**: for asynchronous operations
+- **Flow**: for real-time data updates
 
 ---
 
-## 🚀 Installation et Exécution
+## 🚀 Installation and Execution
 
-### 📥 Prérequis
-- Android Studio installé
-- Utiliser l'émulateur d'Android Studio ou un appareil Android connecté
+### 📥 Prerequisites
+- Android Studio installed
+- Use the Android Studio emulator or a connected Android device
 
-### 🏃 Exécuter l'application
-1. Cloner le projet :
+### 🏃 Running the Application
+1. Clone the project:
    ```bash
    git clone https://github.com/zakaribel-dev/recipes.git
