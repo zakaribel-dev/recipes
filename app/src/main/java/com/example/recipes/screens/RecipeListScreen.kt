@@ -136,7 +136,7 @@ fun RecipeListScreen(repository: RecipeRepository, onRecipeClick: (Recipe) -> Un
             val lastItem = visibleItems.last() // Prend le dernier élément visible dans la grille
             val lastVisibleItemIndex = lastItem.index // Récupère son index (sa position dans la liste)
 
-            // 📌 Vérifie si l'utilisateur a scrollé suffisamment pour déclencher le chargement de la prochaine page
+            //  Vérifie si l'utilisateur a scrollé suffisamment pour déclencher le chargement de la prochaine page
             if (lastVisibleItemIndex >= filteredRecipes.size - 5 && !isPagingLoading) {
                 //filteredRecipes et pas juste recipes pour prendre en compte "All"
 
@@ -164,12 +164,12 @@ fun RecipeListScreen(repository: RecipeRepository, onRecipeClick: (Recipe) -> Un
                 .padding(padding)
                 .padding(16.dp)
         ) {
-            // 🔍 Barre de recherche
+            //  Barre de recherche
             RecipeSearchBar(
                 searchQuery = searchQuery,
                 onSearchChange = {
                     searchQuery = it
-                    selectedCategory = "All" // ✅ Réinitialise le filtre si l’utilisateur tape une recherche
+                    selectedCategory = "All" // Réinitialise le filtre si l’utilisateur tape une recherche
                 }
             )
 
@@ -180,7 +180,7 @@ fun RecipeListScreen(repository: RecipeRepository, onRecipeClick: (Recipe) -> Un
                 selectedCategory = selectedCategory,
                 onCategorySelected = {
                     selectedCategory = it
-                    searchQuery = "" // ✅ Réinitialise la recherche quand un filtre est sélectionné
+                    searchQuery = "" //  Réinitialise la recherche quand un filtre est sélectionné
                 }
             )
 
