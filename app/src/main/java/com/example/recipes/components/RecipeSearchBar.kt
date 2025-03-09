@@ -10,7 +10,7 @@ fun RecipeSearchBar(searchQuery: String, onSearchChange: (String) -> Unit) {
     TextField(
         value = searchQuery,
         onValueChange = onSearchChange,
-        label = { Text("Rechercher une recette...") },
+        label = { Text("Search a recipe...") },
         modifier = Modifier.fillMaxWidth()
     )
 }

@@ -28,7 +28,7 @@ class RecipeRepository(private val recipeDao: RecipeDao) {
 
     // ✅ Charger les recettes depuis l'API et les enregistrer dans la base de données locale
     suspend fun fetchRecipes(query: String = "", page: Int = 1): Boolean {
-        val url = "$apiUrl?page=$page&query=$query" // 📌 Construire l'URL avec les paramètres
+        val url = "$apiUrl?page=$page&query=$query" // Construire l'URL avec les paramètres
 
         return try {
             // 📌 Requête HTTP GET vers l'API avec l'authentification
