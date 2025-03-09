@@ -52,7 +52,7 @@ Ci-dessous, une checklist basée sur le **barème d'évaluation**, avec pour les
 | **Accès aux détails d'une recette en appuyant dessus** | 4 pts | Fait | **Fichier :** `screens/RecipeListScreen.kt` (Navigation vers l’écran de détails). |
 | **Filtrage des recettes via une barre de recherche** | 4 pts |  Fait | **Fichier :** `screens/RecipeListScreen.kt`, **Méthode :** `filteredRecipes` (Recherche avec `contains(searchQuery, ignoreCase = true)`). |
 | **Filtrage par catégories via des boutons** | 3 pts |  Fait | **Fichier :** `components/RecipeFilters.kt` (Boutons interactifs avec `onClick`). |
-| **Mode hors-ligne : accès aux recettes après consultation initiale** | 8 pts |  Fait | **Fichier :** `db/RecipeDatabase.kt`, **Méthode :** `getDatabase(context)` (Stockage des recettes avec Room). |
+| **Mode hors-ligne : accès aux recettes après consultation initiale** | 8 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthodes :** `getLocalRecipes()` et `fetchRecipes()` (Stockage et récupération des recettes avec Room). |
 | **Mise à jour régulière des données locales** | 4 pts |  Fait | **Fichier :** `repositories/RecipeRepository.kt`, **Méthode :** `fetchRecipes()` (Mise à jour des recettes locales après récupération API). |
 | **Architecture segmentée en couches** | 5 pts |  Fait | **Structure :** Séparation en `screens/`, `repositories/`, `db/`, `models/`, `components/` (Architecture propre et maintenable). |
 
